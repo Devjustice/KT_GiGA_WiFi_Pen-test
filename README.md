@@ -1,7 +1,7 @@
 # KT_GiGA_WiFi_Pen-test
 Thought about KT publc Wifi or Home Hub
 
-Exploiting Weak Authentication & Session Hijacking in an IP Camera System
+Exploiting Weak Authentication & Session Hijacking in an local System
 Introduction
 During a recent security assessment, I discovered an IP camera management system (http://172.30.1.254:8899) with multiple vulnerabilities, including weak authentication, CAPTCHA bypasses, and insecure session handling. This post details the flaws found and how they could be exploited for privilege escalation, cookie theft, and remote code execution (RCE).
 
