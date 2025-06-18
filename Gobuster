@@ -1,0 +1,167 @@
+┌─[user@parrot]─[~/Downloads]
+└──╼ $gobuster dir -u http://172.30.1.254:8899 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://172.30.1.254:8899
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+
+Error: the server returns a status code that matches the provided options for non existing urls. http://172.30.1.254:8899/4a4840ad-4194-4c18-862d-be989279892e => 302 (Length: 37). To continue please exclude the status code or the length
+┌─[✗]─[user@parrot]─[~/Downloads]
+└──╼ $gobuster dir -u http://172.30.1.254:8899 -w /directory-list-2.3-medium.txtError: error on parsing arguments: wordlist file "/directory-list-2.3-medium.txt" does not exist: stat /directory-list-2.3-medium.txt: no such file or directory
+┌─[✗]─[user@parrot]─[~/Downloads]
+└──╼ $l
+directory-list-2.3-medium.txt
+┌─[user@parrot]─[~/Downloads]
+└──╼ $gobuster dir -u http://172.30.1.254:8899 -w directory-list-2.3-medium.txt
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://172.30.1.254:8899
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                directory-list-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+
+Error: the server returns a status code that matches the provided options for non existing urls. http://172.30.1.254:8899/dad861b2-1eb5-42c4-a67a-cfa262cd9c51 => 302 (Length: 37). To continue please exclude the status code or the length
+┌─[✗]─[user@parrot]─[~/Downloads]
+└──╼ $l
+directory-list-2.3-medium.txt
+┌─[user@parrot]─[~/Downloads]
+└──╼ $gobuster dir -u http://172.30.1.254:8899 -w directory-list-2.3-medium.txt
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://172.30.1.254:8899
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                directory-list-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+
+Error: the server returns a status code that matches the provided options for non existing urls. http://172.30.1.254:8899/9edd1cea-deb0-4739-bba4-e6051ab4f6fc => 302 (Length: 37). To continue please exclude the status code or the length
+┌─[✗]─[user@parrot]─[~/Downloads]
+└──╼ $gobuster dir -u http://172.30.1.254:8899 -w directory-list-2.3-medium.txt^C
+┌─[✗]─[user@parrot]─[~/Downloads]
+└──╼ $curl -v "http://172.30.1.254:8899/robots.txt"
+curl -v "http://172.30.1.254:8899/.env"
+curl -v "http://172.30.1.254:8899/config.json"
+*   Trying 172.30.1.254:8899...
+* Connected to 172.30.1.254 (172.30.1.254) port 8899
+* using HTTP/1.x
+> GET /robots.txt HTTP/1.1
+> Host: 172.30.1.254:8899
+> User-Agent: curl/8.11.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 302 Found
+< Cache-Control: no-store, no-cache, must-revalidate, proxy-revalidate
+< Pragma: no-cache
+< Expires: 0
+< Location: /login
+< Content-Type: text/html
+< Content-Length: 37
+< Cache-Control: no-cache
+< Set-Cookie: sid=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT
+< 
+<p>Moved <a href='/login'>here</a>.
+* Connection #0 to host 172.30.1.254 left intact
+*   Trying 172.30.1.254:8899...
+* Connected to 172.30.1.254 (172.30.1.254) port 8899
+* using HTTP/1.x
+> GET /.env HTTP/1.1
+> Host: 172.30.1.254:8899
+> User-Agent: curl/8.11.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 302 Found
+< Cache-Control: no-store, no-cache, must-revalidate, proxy-revalidate
+< Pragma: no-cache
+< Expires: 0
+< Location: /login
+< Content-Type: text/html
+< Content-Length: 37
+< Cache-Control: no-cache
+< Set-Cookie: sid=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT
+< 
+<p>Moved <a href='/login'>here</a>.
+* Connection #0 to host 172.30.1.254 left intact
+*   Trying 172.30.1.254:8899...
+* Connected to 172.30.1.254 (172.30.1.254) port 8899
+* using HTTP/1.x
+> GET /config.json HTTP/1.1
+> Host: 172.30.1.254:8899
+> User-Agent: curl/8.11.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 302 Found
+< Cache-Control: no-store, no-cache, must-revalidate, proxy-revalidate
+< Pragma: no-cache
+< Expires: 0
+< Location: /login
+< Content-Type: text/html
+< Content-Length: 37
+< Cache-Control: no-cache
+< Set-Cookie: sid=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT
+< 
+<p>Moved <a href='/login'>here</a>.
+* Connection #0 to host 172.30.1.254 left intact
+┌─[user@parrot]─[~/Downloads]
+└──╼ $Vcurl -I "http://172.30.1.254:8899/admin"  # Check for 200 OK^C
+┌─[✗]─[user@parrot]─[~/Downloads]
+└──╼ $curl -I "http://172.30.1.254:8899/admin"  # Check for 200 OK
+HTTP/1.1 404 Not Found
+Cache-Control: no-store, no-cache, must-revalidate, proxy-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: text/plain
+Connection: close
+Content-Length: 9
+
+┌─[user@parrot]─[~/Downloads]
+└──╼ $gobuster dir -u http://172.30.1.254:8899 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,html,txt -b 302,404 -t 50
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://172.30.1.254:8899
+[+] Method:                  GET
+[+] Threads:                 50
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+[+] Negative Status codes:   302,404
+[+] User Agent:              gobuster/3.6
+[+] Extensions:              php,html,txt
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+/login                (Status: 200) [Size: 20637]
+Progress: 115247 / 882244 (13.06%)^C
+[!] Keyboard interrupt detected, terminating.
+Progress: 115284 / 882244 (13.07%)
+===============================================================
+Finished
+===============================================================
